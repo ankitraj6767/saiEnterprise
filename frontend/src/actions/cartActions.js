@@ -6,6 +6,8 @@ import {
   SAVE_SHIPING_INFO,
 } from "../constants/cartConstants";
 
+// hi ankit raj 
+
 export const addItemToCart = (id, quantity) => async (dispatch, getState) => {
   const { data } = await axios.get(`/api/v1/product/${id}`);
   dispatch({
@@ -19,7 +21,7 @@ export const addItemToCart = (id, quantity) => async (dispatch, getState) => {
       quantity,
     },
   });
-
+  
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
 
